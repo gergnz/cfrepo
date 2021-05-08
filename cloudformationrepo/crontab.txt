@@ -1,0 +1,4 @@
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+SHELL=/bin/bash
+BASH_ENV=/container.env
+0 * * * * /srv/repoloader.py 2> /proc/1/fd/1

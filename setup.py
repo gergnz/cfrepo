@@ -1,3 +1,4 @@
+"""AWS Stack for CloudFormation Repository"""
 import setuptools
 
 
@@ -9,17 +10,24 @@ setuptools.setup(
     name="cfrepo",
     version="0.0.1",
 
-    description="An empty CDK Python app",
+    description="AWS Stack for CloudFormation Repository",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    author="author",
+    author="@gerngz",
 
     package_dir={"": "cfrepo"},
     packages=setuptools.find_packages(where="cfrepo"),
 
     install_requires=[
-        "aws-cdk.core==1.74.0",
+        "aws-cdk.core==1.102.0",
+        "aws-cdk.aws-s3==1.102.0",
+        "aws-cdk.aws-ecs==1.102.0",
+        "aws-cdk.aws-dynamodb==1.102.0",
+        "aws_cdk.aws_ec2==1.102.0",
+        "aws_cdk.aws_ecs==1.102.0",
+        "aws_cdk.aws_ecs_patterns==1.102.0",
+        "aws_cdk.aws_ecr_assets==1.102.0",
     ],
 
     python_requires=">=3.6",

@@ -1,0 +1,20 @@
+FROM python:latest
+
+COPY requirements.txt /srv
+
+WORKDIR /srv
+
+ARG DEBIAN_FRONTEND="noninteractive"
+ENV TZ=Australia/Sydney
+
+RUN apt-get update && \
+    apt-get dist-upgrade -y
+
+RUN pip install -r requirements.txt
+
+EXPOSE 5000/tcp
+
+ENV FLASK_ENV=development
+ENV FLASK_APP=cloudformationrepo.py
+
+ENTRYPOINT flask run --host 0.0.0.0

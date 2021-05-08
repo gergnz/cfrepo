@@ -82,7 +82,7 @@ class CfrepoStack(core.Stack):
             task_image_options=task_image_options,
             public_load_balancer=True,
             domain_name='cfrepo.'+ZONENAME,
-            domain_zone=r53.HostedZone.from_hosted_zone_attributes(self, 's2szone',
+            domain_zone=r53.HostedZone.from_hosted_zone_attributes(self, 'zone',
                 hosted_zone_id=ZONEID,
                 zone_name=ZONENAME
                 ),

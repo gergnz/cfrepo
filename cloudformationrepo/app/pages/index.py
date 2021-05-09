@@ -34,7 +34,7 @@ class Index():
         for item in allitems:
             name = item['TemplatePATH'].split('/')[-1].split('.')[:1][0]
             #pylint: disable=line-too-long
-            item['Launch'] = '<a href="{0}{1}{2}{3}{4}{5}"><img src="/static/cloudformation-launch-stack.png"></a>'.format(cfuri_part1,cfuri_part2,name,cfuri_part3,cfuri_part4,item['TemplatePATH'])
+            item['Launch'] = '<a href="{0}{1}{2}{3}{4}{5}"><img src="/static/cloudformation-launch-stack.svg"></a>'.format(cfuri_part1,cfuri_part2,name,cfuri_part3,cfuri_part4,item['TemplatePATH'])
             #pylint: enable=line-too-long
             params = ''
             for param in item['TemplateParameters']:
